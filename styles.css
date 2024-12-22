@@ -1,0 +1,181 @@
+:root {
+    --background: #f5f5f5;
+    --text: #333;
+    --button-bg: #ffffff;
+    --button-hover: #e0e0e0;
+    --button-text: #333;
+    --container-bg: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --background: #1a1a1a;
+    --text: #ffffff;
+    --button-bg: #333333;
+    --button-hover: #444444;
+    --button-text: #ffffff;
+    --container-bg: #2d2d2d;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--container-bg);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--button-hover);
+}
+
+.manga-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.manga-page {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--container-bg);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.manga-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow);
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.zoom-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.zoom-controls button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zoom-controls button:hover {
+    background-color: var(--button-hover);
+}
+
+.cascade-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cascade-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+}
+
+.nav-btn:first-child {
+    left: 20px;
+}
+
+.nav-btn:last-child {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .manga-container {
+        padding: 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .controls {
+        margin: 1rem;
+    }
+} 

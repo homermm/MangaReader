@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Manga Reader</h1>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </div>
+
+    <div class="manga-container">
+        <button id="prevBtn" class="nav-btn">←</button>
+        <div class="manga-page">
+            <img id="mangaImage" src="" alt="Página de manga">
+        </div>
+        <button id="nextBtn" class="nav-btn">→</button>
+    </div>
+
+    <div class="controls">
+        <div class="page-counter">
+            Página <span id="currentPage">1</span> de <span id="totalPages">0</span>
+        </div>
+        <div class="control-buttons">
+            <div class="zoom-controls">
+                <button id="zoomOut">-</button>
+                <button id="zoomReset">Reset</button>
+                <button id="zoomIn">+</button>
+            </div>
+            <button id="cascadeMode" class="cascade-btn">Modo Cascada</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
