@@ -30,8 +30,8 @@ class MangaReader {
 
     async init() {
         try {
-            // Crear un array con números del 1 al 20 (o el número que necesites)
-            this.pageFiles = Array.from({ length: 20 }, (_, i) => 
+            // Cargar lista de archivos de la carpeta del capítulo
+            this.pageFiles = Array.from({ length: 54 }, (_, i) => 
                 (i + 1).toString().padStart(2, '0') + '.jpg'
             );
             
